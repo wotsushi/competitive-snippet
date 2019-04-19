@@ -21,6 +21,8 @@ jobs:
       - run:
           name: Make Snippets
           command: pipenv run python make.py
+      - store_artifacts:
+          path: json
 
 workflows:
   test_and_make:
