@@ -1,0 +1,19 @@
+version: 2.1
+
+jobs:
+  make:
+    docker:
+      - image: circleci/python:3.7.3
+    steps:
+      - checkout
+      - run:
+          name: Install Dependencies
+          command: pipenv install
+      - run:
+          name: Make Snippets
+          command: pipenv run python make.py
+
+workflows:
+  test_and_make:
+    jobs:
+      - make
