@@ -1,5 +1,5 @@
 import unittest
-from snippet import readint
+from snippets import readint
 
 
 class TestReadInt(unittest.TestCase):

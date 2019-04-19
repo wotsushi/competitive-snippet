@@ -1,5 +1,5 @@
 import unittest
-from snippet import readintlines
+from snippets import readintlines
 
 
 class TestReadIntLines(unittest.TestCase):
