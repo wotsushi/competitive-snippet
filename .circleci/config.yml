@@ -7,11 +7,11 @@ jobs:
     steps:
       - checkout
       - run:
-        name: Install Dependencies
-        command: pipenv install
+          name: Install Dependencies
+          command: pipenv install
       - run:
-        name: Make Snippets
-        command: python make.py
+          name: Make Snippets
+          command: python make.py
 
 workflows:
   test_and_make:
