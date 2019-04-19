@@ -11,7 +11,7 @@ jobs:
           command: pipenv install
       - run:
           name: Make Snippets
-          command: python make.py
+          command: pipenv run python make.py
 
 workflows:
   test_and_make:
