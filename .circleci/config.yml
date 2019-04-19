@@ -25,4 +25,5 @@ jobs:
 workflows:
   test_and_make:
     jobs:
+      - test_python
       - make
