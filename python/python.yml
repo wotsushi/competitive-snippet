@@ -1,1 +1,15 @@
-[]
+- name: readint
+  prefix: $i
+  description: read an integer
+- name: readints
+  prefix: $is
+  description: read integers
+- name: readintlist
+  prefix: $ils
+  description: read a list of integers
+- name: readintlines
+  prefix: $iln
+  description: read integer lines
+- name: readintslines
+  prefix: $isln
+  description: read integers lines
