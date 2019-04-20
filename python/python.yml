@@ -13,3 +13,9 @@
 - name: readintslines
   prefix: $isln
   description: read integers lines
+- name: readstr
+  prefix: $s
+  description: read a string
+- name: readstrs
+  prefix: $ss
+  description: read strings
