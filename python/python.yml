@@ -19,3 +19,6 @@
 - name: readstrs
   prefix: $ss
   description: read strings
+- name: readstrlines
+  prefix: $sln
+  description: read string lines
