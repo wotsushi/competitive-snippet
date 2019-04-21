@@ -4,19 +4,25 @@ from snippets import readstr
 
 class Test(unittest.TestCase):
     def test_only_ascii_lowercase(self):
-        self.assertEqual(readstr.code(lambda: 'wotsushi'), 'wotsushi')
+        S = readstr.code(lambda: 'wotsushi')
+        self.assertEqual(S, 'wotsushi')
 
     def test_only_ascii_uppercase(self):
-        self.assertEqual(readstr.code(lambda: 'WOTSUSHI'), 'WOTSUSHI')
+        S = readstr.code(lambda: 'WOTSUSHI')
+        self.assertEqual(S, 'WOTSUSHI')
 
     def test_only_digits(self):
-        self.assertEqual(readstr.code(lambda: '31415'), '31415')
+        S = readstr.code(lambda: '31415')
+        self.assertEqual(S, '31415')
 
     def test_only_symbols(self):
-        self.assertEqual(readstr.code(lambda: '...@..#+.'), '...@..#+.')
+        S = readstr.code(lambda: '...@..#+.')
+        self.assertEqual(S, '...@..#+.')
 
     def test_white_space(self):
-        self.assertEqual(readstr.code(lambda: 'wo tsu shi'), 'wo tsu shi')
+        S = readstr.code(lambda: 'wo tsu shi')
+        self.assertEqual(S, 'wo tsu shi')
 
     def test_mix(self):
-        self.assertEqual(readstr.code(lambda: 'Wo 2_shi!'), 'Wo 2_shi!')
+        S = readstr.code(lambda: 'Wo 2_shi!')
+        self.assertEqual(S, 'Wo 2_shi!')
