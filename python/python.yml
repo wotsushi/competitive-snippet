@@ -1,1 +1,42 @@
-[]
+- name: readint
+  prefix: $i
+  description: read an integer
+- name: readints
+  prefix: $i2
+  description: read integers
+- name: readintlist
+  prefix: $ils
+  description: read a list of integers
+- name: readintlines
+  prefix: $iln
+  description: read integer lines
+- name: readintslines
+  prefix: $i2ln
+  description: read integers lines
+- name: readstr
+  prefix: $s
+  description: read a string
+- name: readstrs
+  prefix: $s2
+  description: read strings
+- name: readstrlist
+  prefix: $sls
+  description: read a list of strings
+- name: readstrlines
+  prefix: $sln
+  description: read string lines
+- name: readstrslines
+  prefix: $s2ln
+  description: read strings lines
+- name: readintandstr
+  prefix: $is
+  description: read an int and a string
+- name: readstrandint
+  prefix: $si
+  description: read a string and an int
+- name: readintandstrlines
+  prefix: $isln
+  description: read int and string lines
+- name: readstrandintlines
+  prefix: $siln
+  description: read string and int lines

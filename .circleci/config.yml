@@ -4,12 +4,12 @@ jobs:
   test_python:
     docker:
       - image: circleci/python:3.7.3
-    working_directory: ~/project/python
     steps:
       - checkout
       - run:
           name: Run Tests
           command: python -m unittest
+          working_directory: ~/project/python
   make:
     docker:
       - image: circleci/python:3.7.3
