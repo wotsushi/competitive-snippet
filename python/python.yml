@@ -43,6 +43,9 @@
 - name: readgraph
   prefix: $g
   description: read a graph
+- name: readdirectedgraph
+  prefix: $dg
+  description: read a directed graph
 - name: bisectionmethod
   prefix: $bis
   description: bisection method(Meguru)
