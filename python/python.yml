@@ -49,6 +49,9 @@
 - name: readweightedgraph
   prefix: $wg
   description: read a weighted graph
+- name: readweighteddirectedgraph
+  prefix: $wdg
+  description: read a weighted directed graph
 - name: bisectionmethod
   prefix: $bis
   description: bisection method(Meguru)
