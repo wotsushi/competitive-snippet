@@ -40,6 +40,9 @@
 - name: readstrandintlines
   prefix: $siln
   description: read string and int lines
+- name: readgraph
+  prefix: $g
+  description: read a graph
 - name: bisectionmethod
   prefix: $bis
   description: bisection method(Meguru)
