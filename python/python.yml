@@ -58,3 +58,7 @@
 - name: eratosthenes_sieve
   prefix: $era
   description: enumerate prime numbers with the Sieve of Eratosthenes
+- name: dijkstra
+  prefix: $dijkstra
+  description: find the shortest path using Dijkstra's algorithm
+
