@@ -64,3 +64,6 @@
 - name: warshall_floyd
   prefix: $wf
   description: find all-pairs shortest path using Warshall-Floyd algorithm
+- name: bellman_ford
+  prefix: $bf
+  description: find the shortest path using Dijkstra's algorithm
