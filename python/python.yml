@@ -66,4 +66,4 @@
   description: find all-pairs shortest path using Warshall-Floyd algorithm
 - name: bellman_ford
   prefix: $bf
-  description: find the shortest path using Dijkstra's algorithm
+  description: find the shortest path using Bellman-Ford algorithm
