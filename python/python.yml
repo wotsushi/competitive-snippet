@@ -67,3 +67,6 @@
 - name: bellman_ford
   prefix: $bf
   description: find the shortest path using Bellman-Ford algorithm
+- name: prim
+  prefix: $prim
+  description: find a minimum spanning tree using Prim's algorithm
