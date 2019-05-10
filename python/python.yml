@@ -70,3 +70,6 @@
 - name: prim
   prefix: $prim
   description: find a minimum spanning tree using Prim's algorithm
+- name: segment_tree
+  prefix: $segt
+  description: segment tree
