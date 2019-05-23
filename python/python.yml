@@ -73,3 +73,6 @@
 - name: segment_tree
   prefix: $segt
   description: segment tree
+- name: union_find_tree
+  prefix: $uft
+  description: union find tree
