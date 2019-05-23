@@ -29,7 +29,7 @@ def parse(src_path: str) -> List[str]:
                 enumerate(
                     iterable=dict.fromkeys(
                         re.findall(
-                            pattern=r'\W_(\w+)',
+                            pattern=r'\W_([a-zA-Z0-9]+)',
                             string=src
                         )
                     ),
