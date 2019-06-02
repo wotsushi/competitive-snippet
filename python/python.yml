@@ -76,3 +76,6 @@
 - name: union_find_tree
   prefix: $uft
   description: union find tree
+- name: modint
+  prefix: $mint
+  description: ModInt
