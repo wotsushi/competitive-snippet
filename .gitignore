@@ -98,4 +98,7 @@ ENV/
 # mypy
 .mypy_cache/
 
+# Pytest
+.pytest_cache/
+
 json/
