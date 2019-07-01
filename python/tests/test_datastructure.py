@@ -1,4 +1,4 @@
-from snippets.datastructure import union_find_tree, segment_tree
+from snippets.datastructure import union_find_tree, segment_tree, modint
 from parameterized import parameterized
 from operator import add
 
@@ -444,4 +444,156 @@ updated_not_pow_of_2_rmq = build_segtree(
 )
 def test_segtree(segtree, s, expected):
     actual = segtree[s]
+    assert actual == expected
+
+
+ModInt = modint.code(10**9 + 7)
+
+
+@parameterized.expand(
+    [
+        (
+            ModInt(10**9 + 8),
+            '1'
+        )
+    ]
+)
+def test_modint_str(N, expected):
+    actual = str(N)
+    assert actual == expected
+
+
+@parameterized.expand(
+    [
+        (
+            ModInt(10**9 + 8),
+            '1'
+        )
+    ]
+)
+def test_modint_repr(N, expected):
+    actual = repr(N)
+    assert actual == expected
+
+
+@parameterized.expand(
+    [
+        (
+            ModInt(10**9 + 8),
+            1,
+            2
+        ),
+        (
+            ModInt(10**9 + 8),
+            ModInt(1),
+            2
+        ),
+        (
+            1,
+            ModInt(10**9 + 8),
+            2
+        )
+    ]
+)
+def test_modint_add(A, B, expected):
+    print(A)
+    print(B)
+    print(A + B)
+    actual = (A + B).x
+    assert actual == expected
+
+
+@parameterized.expand(
+    [
+        (
+            ModInt(10**9 + 8),
+            1,
+            0
+        ),
+        (
+            ModInt(10**9 + 8),
+            ModInt(1),
+            0
+        ),
+        (
+            1,
+            ModInt(10**9 + 8),
+            0
+        )
+    ]
+)
+def test_modint_sub(A, B, expected):
+    actual = (A - B).x
+    assert actual == expected
+
+
+@parameterized.expand(
+    [
+        (
+            ModInt(10**9 + 8),
+            2,
+            2
+        ),
+        (
+            ModInt(10**9 + 8),
+            ModInt(2),
+            2
+        ),
+        (
+            2,
+            ModInt(10**9 + 8),
+            2
+        )
+    ]
+)
+def test_modint_mul(A, B, expected):
+    actual = (A * B).x
+    assert actual == expected
+
+
+@parameterized.expand(
+    [
+        (
+            ModInt(10**9 + 8),
+            2,
+            500000004
+        ),
+        (
+            ModInt(10**9 + 8),
+            ModInt(2),
+            500000004
+        ),
+        (
+            1,
+            ModInt(10**9 + 9),
+            500000004
+        )
+    ]
+)
+def test_modint_div(A, B, expected):
+    actual = (A / B).x
+    assert actual == expected
+
+
+@parameterized.expand(
+    [
+        (
+            ModInt(10**9 + 9),
+            3,
+            8
+        ),
+        (
+            ModInt(10**9 + 9),
+            ModInt(3),
+            8
+        ),
+        (
+            2,
+            ModInt(10**9 + 10),
+            8
+        )
+    ]
+)
+def test_modint_pow(A, B, expected):
+    actual = (A**B).x
     assert actual == expected
