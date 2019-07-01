@@ -7,10 +7,13 @@ jobs:
     steps:
       - checkout
       - run:
+          name: Install All Dependencies
+          command: pipenv install --dev
+      - run:
           name: Run Tests
-          command: python -m unittest
+          command: pipenv run test
           working_directory: ~/project/python
-  make:
+  build:
     docker:
       - image: circleci/python:3.7.3
     steps:
@@ -20,7 +23,7 @@ jobs:
           command: pipenv install
       - run:
           name: Make Snippets
-          command: pipenv run python make.py
+          command: pipenv run build
       - store_artifacts:
           path: json
 
@@ -28,4 +31,4 @@ workflows:
   test_and_make:
     jobs:
       - test_python
-      - make
+      - build
