@@ -1,81 +1,91 @@
-- name: readint
-  prefix: $i
-  description: read an integer
-- name: readints
-  prefix: $i2
-  description: read integers
-- name: readintlist
-  prefix: $ils
-  description: read a list of integers
-- name: readintlines
-  prefix: $iln
-  description: read integer lines
-- name: readintslines
-  prefix: $i2ln
-  description: read integers lines
-- name: readstr
-  prefix: $s
-  description: read a string
-- name: readstrs
-  prefix: $s2
-  description: read strings
-- name: readstrlist
-  prefix: $sls
-  description: read a list of strings
-- name: readstrlines
-  prefix: $sln
-  description: read string lines
-- name: readstrslines
-  prefix: $s2ln
-  description: read strings lines
-- name: readintandstr
-  prefix: $is
-  description: read an int and a string
-- name: readstrandint
-  prefix: $si
-  description: read a string and an int
-- name: readintandstrlines
-  prefix: $isln
-  description: read int and string lines
-- name: readstrandintlines
-  prefix: $siln
-  description: read string and int lines
-- name: readgraph
-  prefix: $g
-  description: read a graph
-- name: readdirectedgraph
-  prefix: $dg
-  description: read a directed graph
-- name: readweightedgraph
-  prefix: $wg
-  description: read a weighted graph
-- name: readweighteddirectedgraph
-  prefix: $wdg
-  description: read a weighted directed graph
-- name: bisectionmethod
-  prefix: $bis
-  description: bisection method(Meguru)
-- name: eratosthenes_sieve
-  prefix: $era
-  description: enumerate prime numbers with the Sieve of Eratosthenes
-- name: dijkstra
-  prefix: $dijkstra
-  description: find the shortest path using Dijkstra's algorithm
-- name: warshall_floyd
-  prefix: $wf
-  description: find all-pairs shortest path using Warshall-Floyd algorithm
-- name: bellman_ford
-  prefix: $bf
-  description: find the shortest path using Bellman-Ford algorithm
-- name: prim
-  prefix: $prim
-  description: find a minimum spanning tree using Prim's algorithm
-- name: segment_tree
-  prefix: $segt
-  description: segment tree
-- name: union_find_tree
-  prefix: $uft
-  description: union find tree
-- name: modint
-  prefix: $mint
-  description: ModInt
+- package: read
+  snippets:
+    - name: readint
+      prefix: $i
+      description: read an integer
+    - name: readints
+      prefix: $i2
+      description: read integers
+    - name: readintlist
+      prefix: $ils
+      description: read a list of integers
+    - name: readintlines
+      prefix: $iln
+      description: read integer lines
+    - name: readintslines
+      prefix: $i2ln
+      description: read integers lines
+    - name: readstr
+      prefix: $s
+      description: read a string
+    - name: readstrs
+      prefix: $s2
+      description: read strings
+    - name: readstrlist
+      prefix: $sls
+      description: read a list of strings
+    - name: readstrlines
+      prefix: $sln
+      description: read string lines
+    - name: readstrslines
+      prefix: $s2ln
+      description: read strings lines
+    - name: readintandstr
+      prefix: $is
+      description: read an int and a string
+    - name: readstrandint
+      prefix: $si
+      description: read a string and an int
+    - name: readintandstrlines
+      prefix: $isln
+      description: read int and string lines
+    - name: readstrandintlines
+      prefix: $siln
+      description: read string and int lines
+- package: graph
+  snippets:
+    - name: readgraph
+      prefix: $g
+      description: read a graph
+    - name: readdirectedgraph
+      prefix: $dg
+      description: read a directed graph
+    - name: readweightedgraph
+      prefix: $wg
+      description: read a weighted graph
+    - name: readweighteddirectedgraph
+      prefix: $wdg
+      description: read a weighted directed graph
+    - name: dijkstra
+      prefix: $dijkstra
+      description: find the shortest path using Dijkstra's algorithm
+    - name: warshall_floyd
+      prefix: $wf
+      description: find all-pairs shortest path using Warshall-Floyd algorithm
+    - name: bellman_ford
+      prefix: $bf
+      description: find the shortest path using Bellman-Ford algorithm
+    - name: prim
+      prefix: $prim
+      description: find a minimum spanning tree using Prim's algorithm
+- package: algorithm
+  snippets:
+    - name: bisectionmethod
+      prefix: $bis
+      description: bisection method(Meguru)
+- package: math
+  snippets:
+    - name: eratosthenes_sieve
+      prefix: $era
+      description: enumerate prime numbers with the Sieve of Eratosthenes
+- package: datastructure
+  snippets:
+    - name: segment_tree
+      prefix: $segt
+      description: Segment Tree
+    - name: union_find_tree
+      prefix: $uft
+      description: Union Find Tree
+    - name: modint
+      prefix: $mint
+      description: ModInt

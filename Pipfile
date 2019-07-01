@@ -4,10 +4,16 @@ url = "https://pypi.org/simple"
 verify_ssl = true
 
 [dev-packages]
+pytest = "*"
+flake8 = "*"
+parameterized = "*"
 
 [packages]
-requests = "*"
 pyyaml = "*"
 
 [requires]
 python_version = "3.7"
+
+[scripts]
+test = "pytest"
+build = "python make.py"
