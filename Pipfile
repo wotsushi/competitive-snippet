@@ -17,3 +17,4 @@ python_version = "3.7"
 
 [scripts]
 test = "pytest"
+build = "python make.py"

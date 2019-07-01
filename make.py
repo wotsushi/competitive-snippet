@@ -21,10 +21,12 @@ if __name__ == "__main__":
                         'prefix': snippet['prefix'],
                         'description': snippet['description'],
                         'body': parser(
-                            f'{lang_name}/snippets/{snippet["name"]}.{ext}'
+                            f'{lang_name}/snippets/{group["package"]}/'
+                            f'{snippet["name"]}.{ext}'
                         )
                     }
-                    for snippet in snippet_list
+                    for group in snippet_list
+                    for snippet in group['snippets']
                 },
                 snippets_json,
                 indent=2

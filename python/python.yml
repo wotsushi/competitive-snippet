@@ -1,5 +1,4 @@
-
-- group: input
+- package: read
   snippets:
     - name: readint
       prefix: $i
@@ -43,7 +42,7 @@
     - name: readstrandintlines
       prefix: $siln
       description: read string and int lines
-- group: graph
+- package: graph
   snippets:
     - name: readgraph
       prefix: $g
@@ -69,22 +68,24 @@
     - name: prim
       prefix: $prim
       description: find a minimum spanning tree using Prim's algorithm
-- group: algorithm
+- package: algorithm
   snippets:
     - name: bisectionmethod
       prefix: $bis
       description: bisection method(Meguru)
+- package: math
+  snippets:
     - name: eratosthenes_sieve
       prefix: $era
       description: enumerate prime numbers with the Sieve of Eratosthenes
-- group: data_structure
+- package: datastructure
   snippets:
     - name: segment_tree
       prefix: $segt
-      description: segment tree
+      description: Segment Tree
     - name: union_find_tree
       prefix: $uft
-      description: union find tree
+      description: Union Find Tree
     - name: modint
       prefix: $mint
       description: ModInt
