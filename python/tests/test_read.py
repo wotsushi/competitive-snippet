@@ -23,18 +23,9 @@ def mock_input(*lines):
 
 @parameterized.expand(
     [
-        (
-            mock_input('1'),
-            1
-        ),
-        (
-            mock_input('0'),
-            0
-        ),
-        (
-            mock_input('-1'),
-            -1
-        )
+        (mock_input('1'), 1),
+        (mock_input('0'), 0),
+        (mock_input('-1'), -1)
     ]
 )
 def test_readint(input, expected):
@@ -44,18 +35,9 @@ def test_readint(input, expected):
 
 @parameterized.expand(
     [
-        (
-            mock_input('1 2'),
-            (1, 2)
-        ),
-        (
-            mock_input('0 -1'),
-            (0, -1)
-        ),
-        (
-            mock_input('3 3'),
-            (3, 3)
-        )
+        (mock_input('1 2'), (1, 2)),
+        (mock_input('0 -1'), (0, -1)),
+        (mock_input('3 3'), (3, 3))
     ]
 )
 def test_readints(input, expected):
@@ -65,18 +47,9 @@ def test_readints(input, expected):
 
 @parameterized.expand(
     [
-        (
-            mock_input('1 2 3'),
-            [1, 2, 3]
-        ),
-        (
-            mock_input('-1'),
-            [-1]
-        ),
-        (
-            mock_input(''),
-            []
-        )
+        (mock_input('1 2 3'), [1, 2, 3]),
+        (mock_input('-1'), [-1]),
+        (mock_input(''), [])
     ]
 )
 def test_readintlist(input, expected):
@@ -86,21 +59,9 @@ def test_readintlist(input, expected):
 
 @parameterized.expand(
     [
-        (
-            mock_input('1', '2', '3'),
-            3,
-            [1, 2, 3]
-        ),
-        (
-            mock_input('-1'),
-            1,
-            [-1]
-        ),
-        (
-            mock_input(),
-            0,
-            []
-        )
+        (mock_input('1', '2', '3'), 3, [1, 2, 3]),
+        (mock_input('-1'), 1, [-1]),
+        (mock_input(), 0, [])
     ]
 )
 def test_readintlines(input, N, expected):
@@ -110,21 +71,9 @@ def test_readintlines(input, N, expected):
 
 @parameterized.expand(
     [
-        (
-            mock_input('1 -1', '2 -2', '3 -3'),
-            3,
-            ((1, 2, 3), (-1, -2, -3))
-        ),
-        (
-            mock_input('0 0'),
-            1,
-            ((0,), (0,))
-        ),
-        (
-            mock_input(),
-            0,
-            ((), ())
-        )
+        (mock_input('1 -1', '2 -2', '3 -3'), 3, ((1, 2, 3), (-1, -2, -3))),
+        (mock_input('0 0'), 1, ((0,), (0,))),
+        (mock_input(), 0, ((), ()))
     ]
 )
 def test_readintslines(input, N, expected):
@@ -134,30 +83,12 @@ def test_readintslines(input, N, expected):
 
 @parameterized.expand(
     [
-        (
-            mock_input('wotsushi'),
-            'wotsushi'
-        ),
-        (
-            mock_input('WOTSUSHI'),
-            'WOTSUSHI'
-        ),
-        (
-            mock_input('31415'),
-            '31415'
-        ),
-        (
-            mock_input('...@..#+.'),
-            '...@..#+.'
-        ),
-        (
-            mock_input('wo tsu shi'),
-            'wo tsu shi'
-        ),
-        (
-            mock_input('Wo 2_shi!'),
-            'Wo 2_shi!'
-        ),
+        (mock_input('wotsushi'), 'wotsushi'),
+        (mock_input('WOTSUSHI'), 'WOTSUSHI'),
+        (mock_input('31415'), '31415'),
+        (mock_input('...@..#+.'), '...@..#+.'),
+        (mock_input('wo tsu shi'), 'wo tsu shi'),
+        (mock_input('Wo 2_shi!'), 'Wo 2_shi!')
     ]
 )
 def test_readstr(input, expected):
@@ -167,26 +98,11 @@ def test_readstr(input, expected):
 
 @parameterized.expand(
     [
-        (
-            mock_input('wotsushi python'),
-            ('wotsushi', 'python')
-        ),
-        (
-            mock_input('WOTSUSHI PYTHON'),
-            ('WOTSUSHI', 'PYTHON')
-        ),
-        (
-            mock_input('31415 2718'),
-            ('31415', '2718')
-        ),
-        (
-            mock_input('...@..#+. .........'),
-            ('...@..#+.', '.........')
-        ),
-        (
-            mock_input('Wo2_shi! pYtHoN'),
-            ('Wo2_shi!', 'pYtHoN')
-        )
+        (mock_input('wotsushi python'), ('wotsushi', 'python')),
+        (mock_input('WOTSUSHI PYTHON'), ('WOTSUSHI', 'PYTHON')),
+        (mock_input('31415 2718'), ('31415', '2718')),
+        (mock_input('...@..#+. .........'), ('...@..#+.', '.........')),
+        (mock_input('Wo2_shi! pYtHoN'), ('Wo2_shi!', 'pYtHoN'))
     ]
 )
 def test_readstrs(input, expected):
@@ -200,14 +116,8 @@ def test_readstrs(input, expected):
             mock_input('wotsushi PYTHON Wo2_shi!'),
             ['wotsushi', 'PYTHON', 'Wo2_shi!']
         ),
-        (
-            mock_input('...@..#+.'),
-            ['...@..#+.']
-        ),
-        (
-            mock_input(''),
-            []
-        )
+        (mock_input('...@..#+.'), ['...@..#+.']),
+        (mock_input(''), [])
     ]
 )
 def test_readstrlist(input, expected):
@@ -222,16 +132,8 @@ def test_readstrlist(input, expected):
             3,
             ['wotsushi', 'PYTHON', 'Wo2_shi!']
         ),
-        (
-            mock_input('...@..#+.'),
-            1,
-            ['...@..#+.']
-        ),
-        (
-            mock_input(''),
-            0,
-            []
-        )
+        (mock_input('...@..#+.'), 1, ['...@..#+.']),
+        (mock_input(''), 0, [])
     ]
 )
 def test_readstrlines(input, N, expected):
@@ -241,18 +143,9 @@ def test_readstrlines(input, N, expected):
 
 @parameterized.expand(
     [
-        (
-            mock_input('1 wotsushi'),
-            (1, 'wotsushi')
-        ),
-        (
-            mock_input('0 ...@..#+.'),
-            (0, '...@..#+.')
-        ),
-        (
-            mock_input('-1 Wo2_shi!'),
-            (-1, 'Wo2_shi!')
-        )
+        (mock_input('1 wotsushi'), (1, 'wotsushi')),
+        (mock_input('0 ...@..#+.'), (0, '...@..#+.')),
+        (mock_input('-1 Wo2_shi!'), (-1, 'Wo2_shi!'))
     ]
 )
 def test_readintandstr(input, expected):
@@ -262,18 +155,9 @@ def test_readintandstr(input, expected):
 
 @parameterized.expand(
     [
-        (
-            mock_input('wotsushi 1'),
-            ('wotsushi', 1)
-        ),
-        (
-            mock_input('...@..#+. 0'),
-            ('...@..#+.', 0)
-        ),
-        (
-            mock_input('Wo2_shi! -1'),
-            ('Wo2_shi!', -1)
-        )
+        (mock_input('wotsushi 1'), ('wotsushi', 1)),
+        (mock_input('...@..#+. 0'), ('...@..#+.', 0)),
+        (mock_input('Wo2_shi! -1'), ('Wo2_shi!', -1))
     ]
 )
 def test_readstrandint(input, expected):
@@ -288,16 +172,8 @@ def test_readstrandint(input, expected):
             3,
             ((1, 2, 3), ('wotsushi', 'PYTHON', 'Wo2_shi!'))
         ),
-        (
-            mock_input('0 ...@..#+.'),
-            1,
-            ((0,), ('...@..#+.',))
-        ),
-        (
-            mock_input(),
-            0,
-            ((), ())
-        )
+        (mock_input('0 ...@..#+.'), 1, ((0,), ('...@..#+.',))),
+        (mock_input(), 0, ((), ()))
     ]
 )
 def test_readintandstrlines(input, N, expected):
@@ -312,16 +188,8 @@ def test_readintandstrlines(input, N, expected):
             3,
             (('wotsushi', 'PYTHON', 'Wo2_shi!'), (1, 2, 3))
         ),
-        (
-            mock_input('...@..#+. 0'),
-            1,
-            (('...@..#+.',), (0,))
-        ),
-        (
-            mock_input(),
-            0,
-            ((), ())
-        )
+        (mock_input('...@..#+. 0'), 1, (('...@..#+.',), (0,))),
+        (mock_input(), 0, ((), ()))
     ]
 )
 def test_readstrandintlines(input, N, expected):
