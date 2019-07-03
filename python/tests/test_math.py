@@ -1,5 +1,33 @@
-from snippets.math import eratosthenes_sieve
+from snippets.math import combination, eratosthenes_sieve
 from parameterized import parameterized
+
+
+@parameterized.expand(
+    [
+        (0, 0, 1),
+        (1, 0, 1),
+        (1, 1, 1),
+        (2, 0, 1),
+        (2, 1, 2),
+        (2, 2, 1),
+        (3, 0, 1),
+        (3, 1, 3),
+        (3, 2, 3),
+        (3, 3, 1),
+        (4, 0, 1),
+        (4, 1, 4),
+        (4, 2, 6),
+        (4, 3, 4),
+        (4, 4, 1),
+        (100000, 50000, 149033233),
+        (31415, 27182, 181880515)
+    ]
+)
+def test_comb(n, r, expected):
+    comb = combination.code(n)
+    actual = comb(n, r).x
+    assert actual == expected
+
 
 primes = eratosthenes_sieve.code(10**6)
 
