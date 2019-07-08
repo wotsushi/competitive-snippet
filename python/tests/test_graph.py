@@ -3,6 +3,7 @@ from snippets.graph import (
     dijkstra,
     prim,
     warshall_floyd,
+    topological_sort,
     readgraph,
     readdirectedgraph,
     readweightedgraph,
@@ -20,7 +21,11 @@ from tests.data_graph import (
     wd_K4,
     wd_sparse_graph,
     wd_negative_weight_graph,
-    wd_zero_weight_graph
+    wd_zero_weight_graph,
+    dag_line,
+    dag_binary_tree,
+    dag_star,
+    dag_grid
 )
 from parameterized import parameterized
 
@@ -275,3 +280,77 @@ def test_warshall_floyd(G, expected):
     apsp = warshall_floyd.code(INF)
     actual = apsp(G)
     assert actual == expected
+
+
+@parameterized.expand(
+    [
+        (
+            dag_line,
+            [
+                [],
+                [2, 4, 5],
+                [],
+                [1, 2, 4, 5],
+                [2, 5],
+                [2]
+            ]
+        ),
+        (
+            dag_binary_tree,
+            [
+                [],
+                [4, 5, 6, 8],
+                [1, 3, 4, 5, 6, 7],
+                [],
+                [3],
+                [],
+                [],
+                [],
+                [5, 6]
+            ]
+        ),
+        (
+            dag_star,
+            [
+                [],
+                [2, 3, 4, 5],
+                [],
+                [],
+                []
+            ]
+        ),
+        (
+            dag_grid,
+            [
+                [],
+                [2, 3, 4, 5, 6, 7, 8, 9],
+                [3, 5, 6, 8, 9],
+                [6, 9],
+                [5, 6, 7, 8, 9],
+                [6, 8, 9],
+                [9],
+                [8, 9],
+                [9],
+                []
+            ]
+        ),
+        (
+            no_edge_graph,
+            [
+                [],
+                [],
+                [],
+                [],
+                []
+            ]
+        )
+    ]
+)
+def test_topological_sort(G, expected):
+    ts = topological_sort.code()
+    actual = ts(G)
+    assert all(
+        actual.index(i) < actual.index(v)
+        for i, V in enumerate(expected[1:], start=1)
+        for v in V
+    )

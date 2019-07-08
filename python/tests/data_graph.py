@@ -208,3 +208,47 @@ wd_zero_weight_graph = [
     },
     {}
 ]
+
+dag_line = [
+    set(),
+    {4},
+    set(),
+    {1},
+    {5},
+    {2}
+]
+
+dag_binary_tree = [
+    set(),
+    {4, 8},
+    {1, 7},
+    set(),
+    {3},
+    set(),
+    set(),
+    set(),
+    {5, 6}
+]
+
+dag_star = [
+    set(),
+    {2, 3, 4, 5},
+    set(),
+    set(),
+    set(),
+    set()
+]
+
+
+dag_grid = [
+    set(),
+    {2, 4},
+    {3, 5},
+    {6},
+    {5, 7},
+    {6, 8},
+    {9},
+    {8},
+    {9},
+    set()
+]

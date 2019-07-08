@@ -68,6 +68,9 @@
     - name: prim
       prefix: $prim
       description: find a minimum spanning tree using Prim's algorithm
+    - name: topological_sort
+      prefix: $ts
+      description: topological sort
 - package: algorithm
   snippets:
     - name: bisectionmethod
