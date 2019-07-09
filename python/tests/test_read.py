@@ -4,6 +4,7 @@ from snippets.read import (
     readintlist,
     readintlines,
     readintslines,
+    readintlistlines,
     readstr,
     readstrs,
     readstrlist,
@@ -78,6 +79,18 @@ def test_readintlines(input, N, expected):
 )
 def test_readintslines(input, N, expected):
     actual = readintslines.code(input, N)
+    assert actual == expected
+
+
+@parameterized.expand(
+    [
+        (mock_input('1 2 4', '0', '9 9'), 3, [[1, 2, 4], [0], [9, 9]]),
+        (mock_input('-1'), 1, [[-1]]),
+        (mock_input(), 0, [])
+    ]
+)
+def test_readintlistlines(input, N, expected):
+    actual = readintlistlines.code(input, N)
     assert actual == expected
 
 

@@ -15,6 +15,9 @@
     - name: readintslines
       prefix: $i2ln
       description: read integers lines
+    - name: readintlistlines
+      prefix: $ilsln
+      description: read lists of integers
     - name: readstr
       prefix: $s
       description: read a string
