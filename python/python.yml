@@ -84,6 +84,9 @@
     - name: eratosthenes_sieve
       prefix: $era
       description: enumerate prime numbers with the Sieve of Eratosthenes
+    - name: combination
+      prefix: $comb
+      description: find a combination
 - package: datastructure
   snippets:
     - name: segment_tree
