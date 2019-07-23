@@ -1,5 +1,30 @@
-from snippets.math import combination, eratosthenes_sieve
+from snippets.math import intceil, combination, eratosthenes_sieve
 from parameterized import parameterized
+
+
+@parameterized.expand(
+    [
+        (-11, 10, -1),
+        (-10, 10, -1),
+        (-9, 10, 0),
+        (-1, 10, 0),
+        (0, 10, 0),
+        (1, 10, 1),
+        (9, 10, 1),
+        (10, 10, 1),
+        (11, 10, 2),
+        (-1, 1, -1),
+        (0, 1, 0),
+        (1, 1, 1),
+        (314159265358979323845999999, 314159265358979323846, 10**6),
+        (314159265358979323846000000, 314159265358979323846, 10**6),
+        (314159265358979323846000001, 314159265358979323846, 10**6 + 1)
+    ]
+)
+def test_intceil(a, b, expected):
+    iceil = intceil.code()
+    actual = iceil(a, b)
+    assert actual == expected
 
 
 @parameterized.expand(

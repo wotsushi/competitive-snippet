@@ -81,6 +81,9 @@
       description: bisection method(Meguru)
 - package: math
   snippets:
+    - name: intceil
+      prefix: $iceil
+      description: ceil function for pair of integers
     - name: eratosthenes_sieve
       prefix: $era
       description: enumerate prime numbers with the Sieve of Eratosthenes
