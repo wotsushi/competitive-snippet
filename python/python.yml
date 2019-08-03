@@ -74,6 +74,9 @@
     - name: topological_sort
       prefix: $ts
       description: topological sort
+    - name: tree
+      prefix: $tree
+      description: find a rooted tree
 - package: algorithm
   snippets:
     - name: bisectionmethod

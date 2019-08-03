@@ -4,6 +4,7 @@ from snippets.graph import (
     prim,
     warshall_floyd,
     topological_sort,
+    tree,
     readgraph,
     readdirectedgraph,
     readweightedgraph,
@@ -25,7 +26,12 @@ from tests.data_graph import (
     dag_line,
     dag_binary_tree,
     dag_star,
-    dag_grid
+    dag_grid,
+    tree_line,
+    tree_complete_bin,
+    tree_balanced,
+    tree_unbalanced,
+    tree_star
 )
 from parameterized import parameterized
 
@@ -354,3 +360,80 @@ def test_topological_sort(G, expected):
         for i, V in enumerate(expected[1:], start=1)
         for v in V
     )
+
+
+@parameterized.expand(
+    [
+        (
+            tree_line,
+            1,
+            [
+                None,
+                (1, {2}),
+                (1, {3}),
+                (2, {4}),
+                (3, set())
+            ]
+        ),
+        (
+            tree_complete_bin,
+            2,
+            [
+                None,
+                (2, {3, 4}),
+                (2, {1, 7}),
+                (1, set()),
+                (1, set()),
+                (7, set()),
+                (7, set()),
+                (2, {5, 6})
+            ]
+        ),
+        (
+            tree_balanced,
+            1,
+            [
+                None,
+                (1, {2, 3, 4}),
+                (1, {5, 6, 7}),
+                (1, {8}),
+                (1, set()),
+                (2, set()),
+                (2, set()),
+                (2, set()),
+                (3, set())
+            ]
+        ),
+        (
+            tree_unbalanced,
+            1,
+            [
+                None,
+                (1, {2, 3, 4}),
+                (1, {5, 6, 7}),
+                (1, {8}),
+                (1, set()),
+                (2, set()),
+                (2, set()),
+                (2, {9}),
+                (3, set()),
+                (7, set())
+            ]
+        ),
+        (
+            tree_star,
+            4,
+            [
+                None,
+                (4, set()),
+                (4, set()),
+                (4, set()),
+                (4, {1, 2, 3}),
+            ]
+        )
+    ]
+)
+def test_tree(G, r, expected):
+    t = tree.code()
+    actual = t(G, r)
+    assert expected == actual
