@@ -1,4 +1,7 @@
 # Competitive-Snippet
+
+[![CircleCI](https://circleci.com/gh/wotsushi/competitive-snippet.svg?style=svg)](https://circleci.com/gh/wotsushi/competitive-snippet)
+
 VSCode's snippets for competitive programming
 
 ## Requirement

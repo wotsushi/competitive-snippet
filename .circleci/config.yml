@@ -13,6 +13,10 @@ jobs:
           name: Run Tests
           command: pipenv run test
           working_directory: ~/project/python
+      - run:
+          name: codecov
+          command: pipenv run codecov
+          working_directory: ~/project/python
   build:
     docker:
       - image: circleci/python:3.7.3

@@ -7,6 +7,8 @@ verify_ssl = true
 pytest = "*"
 flake8 = "*"
 parameterized = "*"
+pytest-cov = "*"
+codecov = "*"
 
 [packages]
 pyyaml = "*"
@@ -15,5 +17,5 @@ pyyaml = "*"
 python_version = "3.7"
 
 [scripts]
-test = "pytest"
+test = "pytest -v --cov=."
 build = "python make.py"
