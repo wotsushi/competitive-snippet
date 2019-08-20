@@ -12,10 +12,14 @@ codecov = "*"
 
 [packages]
 pyyaml = "*"
+click = "*"
+requests = "*"
 
 [requires]
 python_version = "3.7"
 
 [scripts]
-test = "pytest -v --cov=."
+create = "python create.py"
+test = "python judge.py"
+pull = "python pull.py"
 build = "python make.py"

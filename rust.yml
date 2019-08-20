@@ -1,0 +1,34 @@
+- package: read
+  snippets:
+  - description: read an i64
+    name: readi64
+    prefix: $i
+  - description: read a usize
+    name: readusize
+    prefix: $u
+  - description: read a string as Vec<char>
+    name: readstr
+    prefix: $s
+  - description: read two i64s
+    name: readi642
+    prefix: $i2
+  - description: read two usizes
+    name: readusize2
+    prefix: $u2
+  - description: read a list of i64s
+    name: readi64ls
+    prefix: $ils
+  - description: read i64 lines
+    name: readi64lns
+    prefix: $ilns
+  - description: read integers lines
+    name: readi642lns
+    prefix: $i2lns
+  - description: read three i64s
+    name: readi643
+    prefix: $i3
+- package: algorithm
+  snippets:
+  - description: bisection method(Meguru)
+    name: bis
+    prefix: $bis

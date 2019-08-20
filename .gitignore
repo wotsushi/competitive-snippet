@@ -95,6 +95,9 @@ ENV/
 # mkdocs documentation
 /site
 
+# vscode
+.vscode/
+
 # mypy
 .mypy_cache/
 
@@ -102,3 +105,6 @@ ENV/
 .pytest_cache/
 
 json/
+
+# ignore binary
+*.out
