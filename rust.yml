@@ -36,6 +36,9 @@
   - description: read lists of i64s
     name: readi64lslns
     prefix: $ilslns
+  - description: read a string as Vec<char>
+    name: readstr
+    prefix: $s
 - package: algorithm
   snippets:
   - description: bisection method(Meguru)
