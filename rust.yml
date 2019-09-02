@@ -33,6 +33,9 @@
   - description: read three usizes
     name: readusize3
     prefix: $u3
+  - description: read lists of i64s
+    name: readi64lslns
+    prefix: $ilslns
 - package: algorithm
   snippets:
   - description: bisection method(Meguru)
