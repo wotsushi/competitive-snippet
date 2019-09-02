@@ -27,6 +27,9 @@
   - description: read three i64s
     name: readi643
     prefix: $i3
+  - description: read three i64s
+    name: readi643
+    prefix: $i3
 - package: algorithm
   snippets:
   - description: bisection method(Meguru)

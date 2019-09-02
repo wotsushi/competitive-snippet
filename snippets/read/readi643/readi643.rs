@@ -1,7 +1,7 @@
 #![allow(non_snake_case)]
 #![allow(unused_variables)]
 
-// https://onlinejudge.u-aizu.ac.jp/courses/lesson/2/ITP1/2/ITP1_2_B
+// https://onlinejudge.u-aizu.ac.jp/courses/lesson/8/ITP2/all/ITP2_3_A
 
 fn main() {
     // snip
@@ -20,12 +20,11 @@ fn main() {
     let a = _A;
     let b = _B;
     let c = _C;
+    let ans = format!(
+        "{} {}",
+        *vec![a, b, c].iter().min().unwrap(),
+        *vec![a, b, c].iter().max().unwrap()
+    );
 
-    let ans = if a < b && b < c {
-        "Yes"
-    } else {
-        "No"
-    };
-
-    println!("{}", ans)
+    println!("{}", ans);
 }
