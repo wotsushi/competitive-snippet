@@ -52,3 +52,6 @@
   - description: obtain a weighted graph
     name: weightedgraph
     prefix: $wg
+  - description: Find the cost of the mst by Prim's algorithm
+    name: prim
+    prefix: $prim
