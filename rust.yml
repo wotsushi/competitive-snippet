@@ -39,6 +39,9 @@
   - description: read a string as Vec<char>
     name: readstr
     prefix: $s
+  - description: read three usizes lines
+    name: readu3lns
+    prefix: $u3lns
 - package: algorithm
   snippets:
   - description: bisection method(Meguru)
