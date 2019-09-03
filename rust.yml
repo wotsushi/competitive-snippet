@@ -47,3 +47,8 @@
   - description: bisection method(Meguru)
     name: bis
     prefix: $bis
+- package: graph
+  snippets:
+  - description: obtain a weighted graph
+    name: weightedgraph
+    prefix: $wg
