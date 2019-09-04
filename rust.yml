@@ -42,6 +42,9 @@
   - description: read three usizes lines
     name: readu3lns
     prefix: $u3lns
+  - description: read a list of usizes
+    name: readuls
+    prefix: $uls
 - package: algorithm
   snippets:
   - description: bisection method(Meguru)
