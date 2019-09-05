@@ -58,3 +58,8 @@
   - description: Find the cost of the mst by Prim's algorithm
     name: prim
     prefix: $prim
+- package: math
+  snippets:
+  - description: Find GCD
+    name: gcd
+    prefix: $gcd
