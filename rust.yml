@@ -63,3 +63,8 @@
   - description: Find GCD
     name: gcd
     prefix: $gcd
+- package: datastructure
+  snippets:
+  - description: modint
+    name: modint
+    prefix: $mint
