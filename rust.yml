@@ -59,6 +59,11 @@
       prefix: $gcd
 - package: datastructure
   snippets:
-  - description: modint
-    name: modint
-    prefix: $mint
+    - description: modint
+      name: modint
+      prefix: $mint
+- package: template
+  snippets:
+    - description: template
+      name: template
+      prefix: $t
