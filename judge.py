@@ -27,6 +27,9 @@ from parameterized import parameterized
 def test_rust(name, snippet_path, snippet_name, serial):
     subprocess.run(
         args=[
+            'rustup',
+            'run',
+            '1.15.1',
             'rustc',
             f'{snippet_path}/{snippet_name}.rs',
             '-o',

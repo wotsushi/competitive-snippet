@@ -9,63 +9,52 @@ from functools import reduce
 
 def parse(src_path: str) -> List[str]:
     with open(src_path) as src_file:
-        src = '\n'.join(
+        src = "\n".join(
             [
                 line.rstrip()
                 for line in takewhile(
-                    lambda line: '// snip' not in line,
+                    lambda line: "// snip" not in line,
                     islice(
-                        dropwhile(
-                            lambda line: '// snip' not in line,
-                            src_file
-                        ),
-                        1,
-                        None
-                    )
+                        dropwhile(lambda line: "// snip" not in line, src_file), 1, None
+                    ),
                 )
             ]
         )
     return [
         line[4:]
         for line in reduce(
-            lambda s, v: s.replace(
-                f'_{v[1]}',
-                f'${{{v[0]}:{v[1]}}}'
-            ),
+            lambda s, v: s.replace(f"_{v[1]}", f"${{{v[0]}:{v[1]}}}"),
             enumerate(
                 iterable=dict.fromkeys(
-                    re.findall(
-                        pattern=r'\W_([a-zA-Z0-9]+)',
-                        string=src
-                    )
+                    re.findall(pattern=r"\W_([a-zA-Z0-9]+)", string=src)
                 ),
-                start=1
+                start=1,
             ),
-            src
-        ).split('\n')
+            src,
+        ).split("\n")
     ]
 
 
 if __name__ == "__main__":
-    with open('rust.yml') as snippet_yml:
+    with open("rust.yml") as snippet_yml:
         snippets = yaml.load(snippet_yml, Loader=yaml.FullLoader)
-    os.makedirs('json', exist_ok=True)
-    with open(f'json/rust.json', 'w') as snippets_json:
+    os.makedirs("json", exist_ok=True)
+    with open(f"json/rust.json", "w") as snippets_json:
         json.dump(
             {
-                snippet['name']: {
-                    'prefix': snippet['prefix'],
-                    'description': snippet['description'],
-                    'body': parse(
+                snippet["name"]: {
+                    "prefix": snippet["prefix"],
+                    "description": snippet["description"],
+                    "body": parse(
                         f'snippets/{group["package"]}/{snippet["name"]}/'
                         f'{snippet["name"]}.rs'
-                    )
+                    ),
                 }
                 for group in snippets
-                for snippet in group['snippets']
+                for snippet in group["snippets"]
             },
             snippets_json,
-            indent=2
+            indent=2,
         )
 
 # if __name__ == "__main__":

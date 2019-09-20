@@ -4,10 +4,10 @@
 
 fn main() {
     // snip
-    let _s: Vec<char> = {
+    let _S: Vec<Vec<char>> = (0.._N).map(|_| {
         let mut line: String = String::new();
         std::io::stdin().read_line(&mut line).unwrap();
         line.trim().chars().collect()
-    };
+    }).collect();
     // snip
 }

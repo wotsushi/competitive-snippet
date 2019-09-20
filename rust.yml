@@ -1,50 +1,44 @@
 - package: read
   snippets:
-  - description: read an i64
-    name: readi64
-    prefix: $i
-  - description: read a usize
-    name: readusize
-    prefix: $u
-  - description: read a string as Vec<char>
-    name: readstr
-    prefix: $s
-  - description: read two i64s
-    name: readi642
-    prefix: $i2
-  - description: read two usizes
-    name: readusize2
-    prefix: $u2
-  - description: read a list of i64s
-    name: readi64ls
-    prefix: $ils
-  - description: read i64 lines
-    name: readi64lns
-    prefix: $ilns
-  - description: read integers lines
-    name: readi642lns
-    prefix: $i2lns
-  - description: read three i64s
-    name: readi643
-    prefix: $i3
-  - description: read three i64s
-    name: readi643
-    prefix: $i3
-  - description: read three usizes
-    name: readusize3
-    prefix: $u3
-  - description: read lists of i64s
-    name: readi64lslns
-    prefix: $ilslns
-  - description: read a string as Vec<char>
-    name: readstr
-    prefix: $s
-  - description: read three usizes lines
-    name: readu3lns
-    prefix: $u3lns
-  - description: read a list of usizes
-    name: readuls
-    prefix: $uls
+    - description: read an int
+      name: readint
+      prefix: $i
+    - description: read two ints
+      name: readint2
+      prefix: $i2
+    - description: read three ints
+      name: readint3
+      prefix: $i3
+    - description: raed four ints
+      name: readint4
+      prefix: $i4
+    - description: read a list of ints
+      name: readils
+      prefix: $ils
+    - description: read int lines
+      name: readilns
+      prefix: $ilns
+    - description: read two ints lines
+      name: readi2lns
+      prefix: $i2lns
+    - description: read three ints lines
+      name: readi3lns
+      prefix: $i3lns
+    - description: read four ints lines
+      name: readi4lns
+      prefix: $i4lns
+    - description: read lists of ints
+      name: readilslns
+      prefix: $ilslns
+    - description: read a string as Vec<char>
+      name: readstr
+      prefix: $s
+    - description: read two strings as two Vec<char>
+      name: readstr2
+      prefix: $s2
+    - description: read list of strings as Vec<Vec<char>>
+      name: readstrlns
+      prefix: $slns
 - package: algorithm
   snippets:
   - description: bisection method(Meguru)

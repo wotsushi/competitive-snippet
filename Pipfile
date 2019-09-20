@@ -9,6 +9,7 @@ flake8 = "*"
 parameterized = "*"
 pytest-cov = "*"
 codecov = "*"
+black = "*"
 
 [packages]
 pyyaml = "*"
@@ -23,3 +24,6 @@ create = "python create.py"
 test = "python judge.py"
 pull = "python pull.py"
 build = "python make.py"
+
+[pipenv]
+allow_prereleases = true
