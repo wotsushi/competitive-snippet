@@ -60,6 +60,9 @@
     - description: find a combination
       name: comb
       prefix: $$comb
+    - description: ceil function for fractions
+      name: iceil
+      prefix: $iceil
 - package: datastructure
   snippets:
     - description: modint
