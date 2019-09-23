@@ -71,6 +71,9 @@
     - description: modint
       name: modint
       prefix: $mint
+    - description: Union Find Tree
+      name: uft
+      prefix: $uft
 - package: template
   snippets:
     - description: template
