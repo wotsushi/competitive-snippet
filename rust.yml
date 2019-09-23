@@ -41,9 +41,9 @@
       prefix: $slns
 - package: algorithm
   snippets:
-  - description: bisection method(Meguru)
-    name: bis
-    prefix: $bis
+    - description: bisection method(Meguru)
+      name: bis
+      prefix: $bis
 - package: graph
   snippets:
   - description: obtain a weighted graph
@@ -57,6 +57,9 @@
     - description: Find GCD
       name: gcd
       prefix: $gcd
+    - description: find a combination
+      name: comb
+      prefix: $$comb
 - package: datastructure
   snippets:
     - description: modint
