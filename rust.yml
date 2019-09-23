@@ -46,12 +46,15 @@
       prefix: $bis
 - package: graph
   snippets:
-  - description: obtain a weighted graph
-    name: weightedgraph
-    prefix: $wg
-  - description: Find the cost of the mst by Prim's algorithm
-    name: prim
-    prefix: $prim
+    - description: obtain a weighted graph
+      name: weightedgraph
+      prefix: $wg
+    - description: Find the cost of the mst by Prim's algorithm
+      name: prim
+      prefix: $prim
+    - description: obtain a weighted directed graph
+      name: weighted_directed_graph
+      prefix: $wdg
 - package: math
   snippets:
     - description: Find GCD
