@@ -55,6 +55,9 @@
     - description: obtain a weighted directed graph
       name: weighted_directed_graph
       prefix: $wdg
+    - description: obtain a graph
+      name: graph
+      prefix: $g
 - package: math
   snippets:
     - description: Find GCD
