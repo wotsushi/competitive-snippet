@@ -58,6 +58,9 @@
     - description: obtain a graph
       name: graph
       prefix: $g
+    - description: obtain a directed graph
+      name: directedgraph
+      prefix: $dg
 - package: math
   snippets:
     - description: Find GCD
