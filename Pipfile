@@ -20,10 +20,11 @@ requests = "*"
 python_version = "3.7"
 
 [scripts]
-create = "python create.py"
-test = "python judge.py"
-pull = "python pull.py"
-build = "python make.py"
+create = "python snip.py create"
+delete = "python snip.py delete"
+test = "python snip.py test"
+pull = "python snip.py pull"
+build = "python snip.py build"
 
 [pipenv]
 allow_prereleases = true
