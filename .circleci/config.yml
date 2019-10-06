@@ -32,7 +32,7 @@ jobs:
           path: json
 
 workflows:
-  test_and_make:
+  build:
     jobs:
-      - test_python
+      # - test_python
       - build
