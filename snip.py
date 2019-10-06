@@ -5,7 +5,6 @@ import shutil
 import glob
 import yaml
 import json
-import pytest
 import re
 from typing import List
 from itertools import takewhile, dropwhile, islice
@@ -135,6 +134,7 @@ def pull(snippet, problem_id):
 @snip.command()
 @click.option("-s", "--snippet", default=None)
 def test(snippet):
+    import pytest
     pytest.main(
         ["test.py", "-k", f"{snippet}_", "--tb=short"]
         if snippet
