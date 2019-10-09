@@ -1,90 +1,93 @@
 - package: read
   snippets:
-    - description: read an int
-      name: readint
-      prefix: $i
-    - description: read two ints
-      name: readint2
-      prefix: $i2
-    - description: read three ints
-      name: readint3
-      prefix: $i3
-    - description: raed four ints
-      name: readint4
-      prefix: $i4
-    - description: read a list of ints
-      name: readils
-      prefix: $ils
-    - description: read int lines
-      name: readilns
-      prefix: $ilns
-    - description: read two ints lines
-      name: readi2lns
-      prefix: $i2lns
-    - description: read three ints lines
-      name: readi3lns
-      prefix: $i3lns
-    - description: read four ints lines
-      name: readi4lns
-      prefix: $i4lns
-    - description: read lists of ints
-      name: readilslns
-      prefix: $ilslns
-    - description: read a string as Vec<char>
-      name: readstr
-      prefix: $s
-    - description: read two strings as two Vec<char>
-      name: readstr2
-      prefix: $s2
-    - description: read list of strings as Vec<Vec<char>>
-      name: readstrlns
-      prefix: $slns
+  - description: read an int
+    name: readint
+    prefix: $i
+  - description: read two ints
+    name: readint2
+    prefix: $i2
+  - description: read three ints
+    name: readint3
+    prefix: $i3
+  - description: raed four ints
+    name: readint4
+    prefix: $i4
+  - description: read a list of ints
+    name: readils
+    prefix: $ils
+  - description: read int lines
+    name: readilns
+    prefix: $ilns
+  - description: read two ints lines
+    name: readi2lns
+    prefix: $i2lns
+  - description: read three ints lines
+    name: readi3lns
+    prefix: $i3lns
+  - description: read four ints lines
+    name: readi4lns
+    prefix: $i4lns
+  - description: read lists of ints
+    name: readilslns
+    prefix: $ilslns
+  - description: read a string as Vec<char>
+    name: readstr
+    prefix: $s
+  - description: read two strings as two Vec<char>
+    name: readstr2
+    prefix: $s2
+  - description: read list of strings as Vec<Vec<char>>
+    name: readstrlns
+    prefix: $slns
 - package: algorithm
   snippets:
-    - description: bisection method(Meguru)
-      name: bis
-      prefix: $bis
+  - description: bisection method(Meguru)
+    name: bis
+    prefix: $bis
 - package: graph
   snippets:
-    - description: obtain a weighted graph
-      name: weightedgraph
-      prefix: $wg
-    - description: Find the cost of the mst by Prim's algorithm
-      name: prim
-      prefix: $prim
-    - description: obtain a weighted directed graph
-      name: weighted_directed_graph
-      prefix: $wdg
-    - description: obtain a graph
-      name: graph
-      prefix: $g
-    - description: obtain a directed graph
-      name: directedgraph
-      prefix: $dg
-    - description: find shortest distance by Dijkstra's algorithm
-      name: dijkstra
-      prefix: $dijkstra
+  - description: obtain a weighted graph
+    name: weightedgraph
+    prefix: $wg
+  - description: Find the cost of the mst by Prim's algorithm
+    name: prim
+    prefix: $prim
+  - description: obtain a weighted directed graph
+    name: weighted_directed_graph
+    prefix: $wdg
+  - description: obtain a graph
+    name: graph
+    prefix: $g
+  - description: obtain a directed graph
+    name: directedgraph
+    prefix: $dg
+  - description: find shortest distance by Dijkstra's algorithm
+    name: dijkstra
+    prefix: $dijkstra
 - package: math
   snippets:
-    - description: Find GCD
-      name: gcd
-      prefix: $gcd
-    - description: find a combination
-      name: comb
-      prefix: $$comb
-    - description: ceil function for fractions
-      name: iceil
-      prefix: $iceil
+  - description: Find GCD
+    name: gcd
+    prefix: $gcd
+  - description: find a combination
+    name: comb
+    prefix: $$comb
+  - description: ceil function for fractions
+    name: iceil
+    prefix: $iceil
 - package: datastructure
   snippets:
-    - description: modint
-      name: modint
-      prefix: $mint
-    - description: Union Find Tree
-      name: uft
-      prefix: $uft
+  - description: modint
+    name: modint
+    prefix: $mint
+  - description: Union Find Tree
+    name: uft
+    prefix: $uft
+  - description: Segment tree
+    name: segtree
+    prefix: $segt
 - package: template
   snippets:
-    - description: template
-      name: template
-      prefix: $t
+  - description: template
+    name: template
+    prefix: $t
