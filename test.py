@@ -40,4 +40,3 @@ def test_rust(name, snippet_path, snippet_name, serial):
         ).stdout.decode()
         expected = ans_test.read()
         assert actual == expected
-
