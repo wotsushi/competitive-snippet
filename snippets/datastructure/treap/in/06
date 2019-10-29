@@ -1,0 +1,21 @@
+20
+insert 1 10
+insert 10 5
+insert 5 3
+insert 11 4
+insert 4 20
+insert 7 8
+insert 9 30
+find 1
+find 2
+find 3
+find 4
+find 5
+find 6
+find 7
+find 8
+find 9
+find 10
+find 11
+find 12
+print

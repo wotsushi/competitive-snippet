@@ -86,6 +86,9 @@
   - description: Segment tree
     name: segtree
     prefix: $segt
+  - description: Trea(self-balancing binary search tree)
+    name: treap
+    prefix: $treap
 - package: template
   snippets:
   - description: template

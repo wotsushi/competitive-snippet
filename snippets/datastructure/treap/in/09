@@ -1,0 +1,23 @@
+22
+insert 53 86
+insert 180 1
+insert 100 20
+insert 108 70
+insert 20 50
+insert 10 25
+insert 18 100
+insert 5 10
+insert 13 71
+insert 14 8
+insert 16 120
+insert 15 3
+insert 12 17
+insert 2 2
+delete 13
+print
+delete 18
+print
+delete 16
+print
+delete 53
+print

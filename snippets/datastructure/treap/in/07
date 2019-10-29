@@ -1,0 +1,12 @@
+11
+insert 1 10
+insert 10 5
+insert 5 3
+insert 11 4
+insert 4 20
+insert 7 8
+insert 9 30
+delete 7
+delete 10
+delete 9
+print
