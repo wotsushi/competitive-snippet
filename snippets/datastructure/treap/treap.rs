@@ -20,15 +20,15 @@ fn main() {
         root: Option<&Node<T>>
     }
     struct TreapNode<T: Copy + Ord> {
-        key: T,
+        k: T,
         p: i64,
         l: Option<&TreapNode<T>>,
         r: Option<&TreapNode<T>>
     }
 
-    fn merge<T: Copy + Ord>(x: Option<&mut TreapNode<T>>, y: Option<&mut TreapNode<T>>) -> &TreapNode<T> {
-        if let Some(a) = x {
-            if let Some(b) = y {
+    fn merge<T: Copy + Ord>(x: &mut Option<&TreapNode<T>>, y: &mut Option<&TreapNode<T>>) -> &TreapNode<T> {
+        if let mut Some(a) = &x {
+            if let mut Some(b) = &y {
                 if a.p > b.p {
                     a.r = merge(a.r, y);
                     a
@@ -44,7 +44,20 @@ fn main() {
         }
     }
 
-    fn split<T: Copy + Ord>(x: Option<&mut TreapNode<T>>, key: T) -> (&TreapNode<T>, &TreapNode<T>) {
+    fn split<T: Copy + Ord>(x: &mut Option<&TreapNode<T>>, key: T) -> (&Option<&TreapNode<T>>, &Option<&TreapNode<T>>) {
+        if let mut Some(a) = &x {
+            if key < a.k {
+                let (l, r) = split(a.l, key);
+                a.l = r;
+                (l, a)
+            } else {
+                let (l, r) = split(a.r, key);
+                a.r = l;
+                (a, r)
+            }
+        } else {
+            (None, None)
+        }
     }
 
     impl<T: Copy + Ord> Treap<T> {
