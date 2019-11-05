@@ -17,7 +17,7 @@ fn main() {
 
     // snip
     struct Treap<T: Copy + Ord> {
-        root: Option<&Node<T>>
+        root: Option<Node<T>>
     }
     struct TreapNode<T: Copy + Ord> {
         k: T,
@@ -26,9 +26,9 @@ fn main() {
         r: Option<&TreapNode<T>>
     }
 
-    fn merge<T: Copy + Ord>(x: &mut Option<&TreapNode<T>>, y: &mut Option<&TreapNode<T>>) -> &TreapNode<T> {
-        if let mut Some(a) = &x {
-            if let mut Some(b) = &y {
+    fn merge<T: Copy + Ord>(x: Option<TreapNode<T>>, y: Option<TreapNode<T>>) -> TreapNode<T> {
+        if let mut Some(a) = x {
+            if let mut Some(b) = y {
                 if a.p > b.p {
                     a.r = merge(a.r, y);
                     a
@@ -44,8 +44,8 @@ fn main() {
         }
     }
 
-    fn split<T: Copy + Ord>(x: &mut Option<&TreapNode<T>>, key: T) -> (&Option<&TreapNode<T>>, &Option<&TreapNode<T>>) {
-        if let mut Some(a) = &x {
+    fn split<T: Copy + Ord>(x: Option<TreapNode<T>>, key: T) -> (Option<TreapNode<T>>, Option<TreapNode<T>>) {
+        if let mut Some(a) = x {
             if key < a.k {
                 let (l, r) = split(a.l, key);
                 a.l = r;
@@ -61,15 +61,17 @@ fn main() {
     }
 
     impl<T: Copy + Ord> Treap<T> {
-        fn new() -> Treap<T> { }
-        fn insert(&mut self, x: T) { }
+        fn new() -> Treap<T> { self.root = None; }
+        fn insert(&mut self, x: T) {
+            let (l, r) = split(self.root, x);
+            sefl.root = Some(merge(merge(l, TreapNode::new(x)), r));
+        }
         fn remove(&mut self, x: T) { }
         fn lower_bound(&self, x: T) -> T { }
         fn upper_bound(&self, x: T) -> T { }
     }
     impl<T: Copy + Ord> TreapNode<T> {
         fn new(key: T) -> TreapNode<T> { }
-        fn insert(&mut self, node: TreapNode<T>) { }
         fn remove(&mut self, x: T) { }
         fn lower_bound(&self, x: T) -> T { }
         fn upper_bound(&self, x: T) -> T { }
