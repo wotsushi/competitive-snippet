@@ -75,6 +75,9 @@
   - description: ceil function for fractions
     name: iceil
     prefix: $iceil
+  - description: Xorshift(Random generator)
+    name: xorshift
+    prefix: $xorshift
 - package: datastructure
   snippets:
   - description: modint
