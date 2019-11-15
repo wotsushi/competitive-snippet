@@ -7,9 +7,7 @@ verify_ssl = true
 pytest = "*"
 flake8 = "*"
 parameterized = "*"
-pytest-cov = "*"
 codecov = "*"
-black = "*"
 
 [packages]
 pyyaml = "*"
@@ -25,6 +23,3 @@ delete = "python snip.py delete"
 test = "python snip.py test"
 pull = "python snip.py pull"
 build = "python snip.py build"
-
-[pipenv]
-allow_prereleases = true
