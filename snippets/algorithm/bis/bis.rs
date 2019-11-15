@@ -29,16 +29,11 @@ fn main() {
         .collect();
 
     // snip
-    fn bis<P>(ok: i64, ng: i64, p: P) -> i64
-        where P: Fn(i64) -> bool {
+    fn bis<P: Fn(i64) -> bool>(ok: i64, ng: i64, p: P) -> i64 {
         let mid = (ok + ng) / 2;
-        if (ok - ng).abs() == 1 {
-            ok
-        } else if p(mid) {
-            bis(mid, ng, p)
-        } else {
-            bis(ok, mid, p)
-        }
+        if (ok - ng).abs() == 1 { ok }
+        else if p(mid) { bis(mid, ng, p) }
+        else { bis(ok, mid, p) }
     }
     // snip
 
