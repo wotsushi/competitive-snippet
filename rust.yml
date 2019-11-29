@@ -94,3 +94,6 @@
   - description: template
     name: template
     prefix: $t
+  - description: non-destructive sort
+    name: sort
+    prefix: $sort
