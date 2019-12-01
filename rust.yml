@@ -64,6 +64,9 @@
   - description: find shortest distance by Dijkstra's algorithm
     name: dijkstra
     prefix: $dijkstra
+  - description: Obtain a rooted tree
+    name: tree
+    prefix: $tree
 - package: math
   snippets:
   - description: Find GCD

@@ -1,0 +1,7 @@
+node 0: parent = 1, depth = 1, leaf, []
+node 1: parent = -1, depth = 0, root, [2, 6, 0]
+node 2: parent = 1, depth = 1, internal node, [3, 4]
+node 3: parent = 2, depth = 2, leaf, []
+node 4: parent = 2, depth = 2, leaf, []
+node 5: parent = 6, depth = 2, leaf, []
+node 6: parent = 1, depth = 1, internal node, [5]
