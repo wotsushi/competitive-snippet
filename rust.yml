@@ -39,6 +39,9 @@
   - description: read list of strings as Vec<Vec<char>>
     name: readstrlns
     prefix: $slns
+  - description: read a string as String
+    name: readstring
+    prefix: $String
 - package: algorithm
   snippets:
   - description: bisection method(Meguru)
