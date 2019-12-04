@@ -103,3 +103,8 @@
   - description: non-destructive sort
     name: sort
     prefix: $sort
+- package: string
+  snippets:
+  - description: abc...xyz
+    name: ascii_lowercase
+    prefix: $lowercase
