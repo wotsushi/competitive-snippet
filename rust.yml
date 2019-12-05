@@ -108,3 +108,6 @@
   - description: abc...xyz
     name: ascii_lowercase
     prefix: $lowercase
+  - description: ABC...XYZ
+    name: ascii_uppercase
+    prefix: $uppercase
