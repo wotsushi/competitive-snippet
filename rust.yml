@@ -70,6 +70,9 @@
   - description: Obtain a rooted tree
     name: tree
     prefix: $tree
+  - description: Find the maximum flow
+    name: flow
+    prefix: $flow
 - package: math
   snippets:
   - description: Find GCD
