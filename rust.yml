@@ -87,6 +87,9 @@
   - description: Xorshift(Random generator)
     name: xorshift
     prefix: $xorshift
+  - description: table of prime numbers
+    name: eratosthenes
+    prefix: $era
 - package: datastructure
   snippets:
   - description: modint
