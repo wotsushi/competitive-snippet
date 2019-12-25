@@ -10,7 +10,7 @@ fn main() {
         let mut iter = line.split_whitespace();
         (
             iter.next().unwrap().parse().unwrap(),
-            iter.next().unwrap().parse().unwrap()
+            iter.next().unwrap().parse().unwrap(),
         )
     };
 
@@ -29,11 +29,18 @@ fn main() {
             std::mem::swap(&mut u, &mut v);
         }
         u %= _MOD;
-        if u >= 0 { u } else { u + _MOD }
+        if u >= 0 {
+            u
+        } else {
+            u + _MOD
+        }
     }
     #[derive(Copy, Clone)]
     struct ModInt {
-        x: i64
+        x: i64,
+    }
+    trait Pow<T> {
+        fn pow(self, T) -> ModInt;
     }
     impl ModInt {
         fn new(x: i64) -> ModInt {
@@ -42,7 +49,27 @@ fn main() {
             } else {
                 (x + (1 - x / _MOD) * _MOD) % _MOD
             };
-            ModInt {x: y}
+            ModInt { x: y }
+        }
+    }
+    impl Pow<i64> for ModInt {
+        fn pow(self, other: i64) -> ModInt {
+            if other == 0 {
+                ModInt::new(1)
+            } else {
+                let sqrt = self.pow(other / 2);
+                let sq = sqrt * sqrt;
+                if other % 2 == 0 {
+                    sq
+                } else {
+                    sq * self.x
+                }
+            }
+        }
+    }
+    impl Pow<usize> for ModInt {
+        fn pow(self, other: usize) -> ModInt {
+            self.pow(other as i64)
         }
     }
     impl std::ops::Add<ModInt> for ModInt {
@@ -125,8 +152,10 @@ fn main() {
     // snip
 
     let fact: Vec<_> = (0..(n + k))
-        .scan(ModInt::new(1),
-            |f, i| {*f = if i == 0 { ModInt::new(1) } else { *f * i }; Some(*f)})
+        .scan(ModInt::new(1), |f, i| {
+            *f = if i == 0 { ModInt::new(1) } else { *f * i };
+            Some(*f)
+        })
         .collect();
     let ans = fact[(n + k - 1) as usize] / (fact[(k - 1) as usize] * fact[n as usize]);
 
